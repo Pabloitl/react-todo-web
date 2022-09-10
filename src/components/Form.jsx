@@ -64,9 +64,14 @@ function Form({ type, task, updateList, onComplete = (f) => f }) {
         fullWidth
         label="Title"
         type="text"
-          {...register("title", {required: true})}
+        {...register("title", { required: true })}
       />
-        <TextField margin="normal" fullWidth type="date" {...register("due", {required: true})} />
+      <TextField
+        margin="normal"
+        fullWidth
+        type="date"
+        {...register("due", { required: true })}
+      />
       <TextField
         margin="normal"
         fullWidth
@@ -74,7 +79,7 @@ function Form({ type, task, updateList, onComplete = (f) => f }) {
         type="text"
         multiline
         rows={3}
-          {...register("description", {required: true})}
+        {...register("description", { required: true })}
       />
       <Button
         type="submit"
